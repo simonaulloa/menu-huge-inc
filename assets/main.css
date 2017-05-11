@@ -53,3 +53,23 @@ transition: all 0.6 cubic-bezier(0.7, 0.01, 0.3, 1);
 .menu:after{
 	top: 8px;
 }
+
+#toggle:hover .menu:before{
+	top: -9px;
+}
+#toggle:hover .menu:after{
+	top: 9px;
+}
+.open .menu {
+	background: none !important;
+}
+.open .menu:after {
+	top: 0 !important;
+	background: #fff !important;
+	transform: rotate(45deg);
+}
+.open .menu:before {
+	top: 0 !important;
+	background: #fff !important;
+	transform: rotate(-45deg);
+}
