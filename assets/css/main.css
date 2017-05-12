@@ -1,31 +1,23 @@
 nav{
-top: 0;
-left: 0;
-width: 100%;
-color: #fff;
-height: 80px;
-z-index: 1000;
-margin-top: 0;
-position: fixed;
-padding-top: 0px;
-background: none;
-transition: all 0.6 cubic-bezier(0.7, 0.01, 0.3, 1); 
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	height: 80px;
+	z-index: 1000;
+	margin-top: 0;
+	position: fixed;
+	padding-top: 0px;
+	background: none;
+	transition: all 0.6 cubic-bezier(0.7, 0.01, 0.3, 1); 
 }
-.logo{ /* esto le da estilo a la clase logo, div class="logo" de HTML*/
-		background-size: 90px;
-	} 
+
+.logo,
 .menu{ /* primera rayita del menu hamburquesa*/
 	position: absolute;
 	z-index: 2000;
-	top: 10px;
-	right: 0;
-	height: 4px;
-	width: 24px;
-	text-align: right;
-	margin: 2rem 2rem;
-	background: #ec008c;
-	transition: all 0.3s;
 }
+
 .logo{
 	left: 0;
 	top: -4px;
@@ -35,8 +27,21 @@ transition: all 0.6 cubic-bezier(0.7, 0.01, 0.3, 1);
 	text-align: left;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-image: url(../assets/img/huge1.png)
+	background-image: url(../img/huge1.png)
+	background-size: 100px 100px;
 }
+
+.menu{
+	top: 0;
+	right: 0;
+	height: 4px;
+	width: 24px;
+	text-align: right;
+	margin: 2rem 2rem;
+	background: #ec008c;
+	transition: all 0.3s;
+	}
+
 #toggle{
 	width: 104px;
 	height: 74px;
@@ -59,9 +64,11 @@ transition: all 0.6 cubic-bezier(0.7, 0.01, 0.3, 1);
 	position: absolute;
 	z-index: -1;
 	}
+
 .menu:before{
 	top: -8px;
 }
+
 .menu:after{
 	top: 8px;
 }
@@ -69,22 +76,27 @@ transition: all 0.6 cubic-bezier(0.7, 0.01, 0.3, 1);
 #toggle:hover .menu:before{
 	top: -9px;
 }
+
 #toggle:hover .menu:after{
 	top: 9px;
 }
+
 .open .menu {
 	background: none !important;
 }
+
 .open .menu:after {
 	top: 0 !important;
 	background: #fff !important;
 	transform: rotate(45deg);
 }
+
 .open .menu:before {
 	top: 0 !important;
 	background: #fff !important;
 	transform: rotate(-45deg);
 }
+
 nav .nav-background {
 	top:0px;
 	opacity: 0;
@@ -96,6 +108,7 @@ nav .nav-background {
 	position: absolute;
 	transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
 }
+
 nav.open .nav-background {
 	opacity: 1;
 	background-color: rgba(217,40,130,0.9) !important;
@@ -109,6 +122,7 @@ nav.open {
 	-moz-transition: none;
 	-webkit-transition: none;
 }
+
 nav ul{
 	top: -10%;
 	padding: 0;
@@ -116,14 +130,15 @@ nav ul{
 	width: 100%;
 	text-align: center;
 	visibility: hidden;
-	/*display: table-cell;*/
 	vertical-align: middle;
 	transform: perspective(600px) rotateX(10deg);
 	transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
 }
+
 nav ul li{
 visibility: hidden;
 }
+
 nav ul li a{
 	color: white;
 	width: 100%;
@@ -131,10 +146,12 @@ nav ul li a{
 	padding: 8px 0 0;
 	letter-spacing: -0.06em;
 }
+
 nav ul li a:hover{
 	color: #ec008c;
 	background-color: white,
 }
+
 nav.open ul {
 	top. 0;
 	opacity: 1;
@@ -142,26 +159,34 @@ nav.open ul {
 	visibility: visible;
 	transform: perspective(600px) rotateX(0deg);
 }
+
 nav.open ul li {
 	color: #fff;
 	font-size: 60px;
 	visibility: visible !important;
 }
+
 nav.header-in{
 	background-color: rgba(217,40,130,0.9);
 }
+
 .solid #toggle .menu{
 	background: #fff;
 }
+
 .solid #toggle .menu:after{
 	background-color: #fff;
 }
+
 .solid #toggle .menu:before{
 	background-color: #fff;
 }
-nav.solid #logo .logo{
-	background-image: url(../assets/img/huge1.png)
+
+nav.open #logo .logo{
+	background-image: url(../img/huge_white.png);
+	background-size: 100px 100px;
 }
-nav.solid #logo .logo{
-	background-image: url(../assets/img/huge1_white.png)
+
+.overflow-hidden{
+	overflow:hidden;
 }
